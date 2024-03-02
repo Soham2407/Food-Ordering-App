@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 3rem;
+}
+
+.restro-container {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: 1px solid black;
+}
+
+.restro-card {
+  width: 16rem;
+  height: 20rem;
+  padding: 8px;
+}
+
+.restro-card:hover {
+  border: 1px solid rgb(172, 172, 172);
+  cursor: pointer;
+}
+
+.restro-card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
