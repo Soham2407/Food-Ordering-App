@@ -1,14 +1,17 @@
-const RestroCard = () => {
+import { RESTAURANT_IMG_URL } from "../utils/constants";
+
+const RestroCard = ({ restro }) => {
+  const { name, cloudinaryImageId, cuisines, avgRating, sla } = restro?.info;
   return (
     <div className="restro-card">
       <img
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ulo3mgvhyuych3itq6pn"
+        src={`${RESTAURANT_IMG_URL}/${cloudinaryImageId}`}
         alt="recipe-img"
       />
-      <h3>Yakhani Biryani</h3>
-      <h4>4.4 stars</h4>
-      <h4>20-25 mins</h4>
-      <h4>Norath Indian. Biryani, Tandoor</h4>
+      <h3>{name}</h3>
+      <h4>{avgRating} stars</h4>
+      <h4>{sla.slaString}</h4>
+      <h4>{cuisines.join(", ")}</h4>
     </div>
   );
 };
